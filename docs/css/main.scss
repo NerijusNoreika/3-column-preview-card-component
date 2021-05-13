@@ -1,0 +1,112 @@
+$mobile-breakpoint: 375px;
+$desktop-breakpoint: 1440px;
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    margin: 0;
+    min-height: 100vh;
+    font-size: 15px;
+    justify-content: center;
+    align-items: center;
+    max-width: 1240px;
+    margin: 0 auto;
+    background: hsl(0, 0%, 95%);
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+.wrapper {
+    display: flex;
+}
+
+.col {
+    max-width: 20em;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 2rem 3rem 2rem;
+}
+
+.col img {
+    display: block;
+    width: 4rem;
+    height: auto;
+    margin: 1em 0;
+}
+
+.col:first-child {
+    background: hsl(31, 77%, 52%);
+    border-radius: 1em 0 0 1em;
+}
+
+.col:nth-child(2) {
+    background: hsl(184, 100%, 22%);
+
+    .button {
+        color: hsl(184, 100%, 22%);
+    }
+}
+
+.col:nth-child(3) {
+    background: hsl(179, 100%, 13%);
+    border-radius: 0 1em 1em 0;
+
+    .button {
+        color: hsl(179, 100%, 13%);
+    }
+}
+
+.col h1 {
+    text-transform: uppercase;
+    letter-spacing: 1;
+}
+
+.col p {
+    color: hsla(0, 0%, 100%, 0.75);
+}
+
+.button:first-of-type {
+    color: hsl(31, 77%, 52%);
+}
+
+.button:nth-of-type(2) {
+    color: hsl(184, 100%, 22%);
+}
+
+.button {
+    align-self: flex-start;
+    flex-shrink: 1;
+    background: hsl(0, 0%, 95%);
+    text-decoration: none;
+    border-radius: 1.5em;
+    padding: 0.8em 2em;
+    margin-top: 5em;
+
+    &:hover {
+        background: transparent;
+        box-shadow: 0 0 0 0.200em hsl(0, 0%, 95%);
+        color: hsl(0, 0%, 95%) !important;
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 576px) {
+    .wrapper {
+        flex-direction: column;
+    }
+
+    .col:nth-child(1) {
+        margin-top: 2em;
+        border-radius: 1em 1em 0 0;
+    }
+    .col:nth-child(3) {
+        margin-bottom: 2em;
+        border-radius: 0 0 1em 1em;
+    }
+}
